@@ -8,8 +8,10 @@ function binarySearch(arr, target) {
         if (arr[mid] === target) {
             return mid; // alvo encontrado
         } else if (arr[mid] < target) {
+            console.log(`Buscando na metade direita: ${arr[mid + 1]} a ${arr[right]}`);
             left = mid + 1; // Buscar na direita
         } else {
+            console.log(`Buscando na metade esquerda: ${arr[left]} a ${arr[mid - 1]}`);
             right = mid - 1; // Buscar na esquerda
         }
     }
